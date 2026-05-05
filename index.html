@@ -88,6 +88,22 @@
             border: black solid 2px;
         }
 
+        button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            background-color: black;
+            color: #e50909;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #e50909;
+            color: black;
+        }
+
         img {
             display: block;
             width: 100%;
@@ -129,7 +145,7 @@
 
     <!-- Lamborghini Intro -->
     <h2 id="hintro">About Lamborghini</h2>
-    <img id="logo" src="logo.png" alt="Lamborghini" width="200">
+    <img id="logo" src="images/logo.png" alt="Lamborghini" width="200">
     <p>
         Lamborghini was founded in 1963 in Italy by Ferruccio Lamborghini. The brand is famous for its bold styling, aggressive aerodynamics, and roaring engines. Lamborghini cars are built for speed, luxury, and pure excitement.
     </p>
@@ -167,7 +183,18 @@
             The Aventador features a <b>V12 engine</b> and is known for its incredible power, sharp lines, and iconic scissor doors.
         </p>
 
-        <img src="aventador.webp" alt="Lamborghini Aventador" width="500">
+        <img src="images/aventador.webp" alt="Lamborghini Aventador" width="500">
+
+        <button onclick="changeImage_LA()"><b>Click to change image</b></button>
+
+        <script>
+            let aventadorImage = ["aventador.webp", "aventador_2.webp", "aventador_3.webp"];
+            let currentIndex_LA = 0;
+            function changeImage_LA() {
+                currentIndex_LA = (currentIndex_LA + 1) % aventadorImage.length;
+                document.querySelector('img[alt="Lamborghini Aventador"]').src = "images/" + aventadorImage[currentIndex_LA];
+            }
+        </script>
 
         <ul>
             <li><strong>Model:</strong> Aventador</li>
@@ -192,7 +219,18 @@
             The Huracán is a mid-engine supercar that showcases Lamborghini's commitment to innovation and performance.
         </p>
 
-        <img src="huracan.jpg" alt="Lamborghini Huracán" width="500">
+        <img src="images/huracan.jpg" alt="Lamborghini Huracán" width="500">
+
+        <button onclick="changeImage_LH()"><b>Click to change image</b></button>
+
+        <script>
+            let huracanImage = ["huracan.jpg", "huracan_2.jpg", "huracan_3.avif"];
+            let currentIndex_LH = 0;
+            function changeImage_LH() {
+                currentIndex_LH = (currentIndex_LH + 1) % huracanImage.length;
+                document.querySelector('img[alt="Lamborghini Huracán"]').src = "images/" + huracanImage[currentIndex_LH];
+            }
+        </script>
 
         <ul>
             <li><strong>Model:</strong> Huracán</li>
@@ -217,7 +255,18 @@
             The Urus is Lamborghini's high-performance SUV, combining the brand's signature style with practicality and versatility.
         </p>
 
-        <img src="urus.webp" alt="Lamborghini Urus" width="500">
+        <img src="images/urus.webp" alt="Lamborghini Urus" width="500">
+
+        <button onclick="changeImage_LU()"><b>Click to change image</b></button>
+
+        <script>
+            let urusImage = ["urus.webp", "urus_2.avif", "urus_3.avif"];
+            let currentIndex_LU = 0;
+            function changeImage_LU() {
+                currentIndex_LU = (currentIndex_LU + 1) % urusImage.length;
+                document.querySelector('img[alt="Lamborghini Urus"]').src = "images/" + urusImage[currentIndex_LU];
+            }
+        </script>
 
         <ul>
             <li><strong>Model:</strong> Urus</li>
